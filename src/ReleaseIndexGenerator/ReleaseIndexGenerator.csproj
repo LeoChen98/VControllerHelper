@@ -13,6 +13,7 @@
     <Company>zhangbudademao.com</Company>
     <Description>A tool for collecting file information.</Description>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <Version>$(AssemblyVersion)</Version>
   </PropertyGroup>
 
   <ItemGroup>

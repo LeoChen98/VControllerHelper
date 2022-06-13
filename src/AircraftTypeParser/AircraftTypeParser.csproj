@@ -14,6 +14,7 @@
     <Copyright>Copyright ©  2022 zhangbudademao.com, all rights reserved.</Copyright>
     <Description>A tool for collecting aircraft information from ICAO.</Description>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <Version>$(AssemblyVersion)</Version>
   </PropertyGroup>
 
   <ItemGroup>
