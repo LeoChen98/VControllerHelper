@@ -1,0 +1,39 @@
+RecentFiles	Recent1	\All\ASRs\ZBPE.asr
+Settings	sector	\All\Sectors\ZBPE.sct
+Settings	SettingsfileSYMBOLOGY	\All\Settings\Symbology.txt
+Settings	SettingsfileVOICE	\All\Profiles\Channels_ZBPE.txt
+Settings	SettingsfilePROFILE	\All\Profiles\Login_ZBPE.txt
+Settings	SettingsfileTAGS	\All\Settings\Tag.txt
+Settings	SettingsfileSIL	\All\Settings\Lists.txt
+Settings	SettingsfileSEL	\All\Settings\Lists.txt
+Settings	SettingsfileDEP	\All\Settings\Lists.txt
+Settings	SettingsfileARR	\All\Settings\Lists.txt
+Settings	SettingsfileFP	\All\Settings\Lists.txt
+Settings	SettingsfilePLUGINS	\All\Settings\Plugin.txt
+Settings	Settingsfile	\All\Settings\General.txt
+Settings	SettingsfileSCREEN	\All\Settings\Layout.txt
+Settings	SettingsfileCONFLICT	\All\Settings\Lists.txt
+Settings	SettingsfileVCCS	\All\Settings\VCCS.txt
+Settings	SettingsfilePILOTING	\All\Settings\Lists.txt
+Settings	airways	\All\FSNavigator\AIRWAY.txt
+Settings	aircraft	\All\ICAO\ICAO_Aircraft.txt
+Settings	airlines	\All\ICAO\ICAO_Airlines.txt
+Settings	AtisFolder	\All\ATIS\ATIS.txt
+Settings	alias	\All\Settings\Alias.txt
+Plugins	Plugin0	\All\Plugins\AfvEuroScopeBridge.dll
+Plugins	Plugin1	\All\Plugins\Topsky\TopSky.dll
+Plugins	Plugin1Display0	Standard ES radar screen
+Plugins	Plugin2	\All\Plugins\Telephonics.dll
+Plugins	Plugin2Display0	Standard ES radar screen
+Plugins	Plugin3	\All\Plugins\vSMR_1.4.0\vSMR.dll
+Plugins	Plugin3Display0	SMR radar display
+Plugins	Plugin3Display1	Standard ES radar screen
+Plugins	Plugin4	\All\Plugins\RDFPlugin.dll
+Plugins	Plugin4Display0	SMR radar display
+Plugins	Plugin4Display1	Standard ES radar screen
+ASRFastKeys	1	\All\ASRs\ZBPE.asr
+ASRFastKeys	2	\All\ASRs\ZBPE_TWR.asr
+LastSession	realname	Leo Chen
+LastSession	certificate	1505339
+LastSession	password	KrTr1Db3
+LastSession	rating	2 

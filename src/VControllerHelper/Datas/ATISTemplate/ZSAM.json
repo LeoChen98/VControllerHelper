@@ -1,0 +1,3 @@
+{
+  "format": "Xiamen Gaoqi International Airport information [{code}], {publish_time} [UTC], {arr_info[apptype]} runway {arr_info[rwy]}, {weather}{windshear}{trans_alt}{trans_fl}{DCL}{extra}on first contact with departure say [SID] designator, after airborne contact approach own, advise on initial contact you have information [{code}]"
+}

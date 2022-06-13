@@ -1,0 +1,13 @@
+{
+  "format": "Nanning Wuxu Intl Airport Info [{code}], {publish_time} Universal Time Coordination, {arr_info[apptype]}, runway {arr_info[rwy]}. {weather}{condition_text[0]}Please contact ground for ATC clearance, Advice on initial contact you have info [{code}].",
+  "elev": 128.4,
+  "condition_text": [
+    {
+      "condition": {
+        "key": "{arr_info[rwy]}",
+        "value": "05"
+      },
+      "text": "As landing right to vacating as soon as possible, Intersection take off from B3, "
+    }
+  ]
+}

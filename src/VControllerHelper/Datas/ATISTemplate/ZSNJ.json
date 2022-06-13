@@ -1,0 +1,9 @@
+{
+  "format": "Nanjing Lukou International Airport information [{code}], {publish_time} [UTC], {dep_info}{arr_info}{arr_oprt}{loc}{weather}{windshear}{extra}advise on initial contact you have information [{code}], {RNAV}.",
+  "loc": {
+    "06": "110.3",
+    "07": "108.7",
+    "24": "110.9",
+    "25": "111.3"
+  }
+}

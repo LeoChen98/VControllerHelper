@@ -1,0 +1,14 @@
+{
+  "format": "Shanghai Pudong International Airport information [{code}], {publish_time} [UTC], {arr_oprt}{dep_info}{arr_info}{loc}{weather}Shanghai Terminal QNH {t_QNH} [hPa], {freq}{DCL}{windshear}{extra}advise on initial contact you have information [{code}], {RNAV}.",
+  "loc": {
+    "16L": "111.5",
+    "16R": "108.7",
+    "17L": "110.7",
+    "17R": "111.1",
+    "34L": "108.3",
+    "34R": "108.9",
+    "35L": "108.1",
+    "35R": "111.9"
+  },
+  "t_QNH": "ZSPD"
+}

@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <StartupObject>ReleaseIndexGenerator.Program</StartupObject>
+    <BaseOutputPath>..\..\bin\$(MSBuildProjectName)</BaseOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="if &quot;$(ConfigurationName)&quot; == &quot;Debug&quot; goto delDebug&#xD;&#xA;del &quot;$(TargetDir)*.xml&quot; /q&#xD;&#xA;del &quot;$(TargetDir)*.pdb&quot; /q&#xD;&#xA;del &quot;$(TargetDir)*.config&quot; /q&#xD;&#xA;goto enddel&#xD;&#xA;&#xD;&#xA;:delDebug&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;:enddel" />
+  </Target>
+
+</Project>

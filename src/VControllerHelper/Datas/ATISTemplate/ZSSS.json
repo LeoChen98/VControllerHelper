@@ -1,0 +1,10 @@
+{
+  "format": "Shanghai Hongqiao International Airport information [{code}], {publish_time} [UTC], {dep_info}{arr_info}{loc}{weather}Shanghai Terminal QNH {t_QNH} [hPa], {freq}{DCL}{windshear}{extra}advise on initial contact you have information [{code}], {RNAV}.",
+  "loc": {
+    "18L": "111.3",
+    "18R": "110.9",
+    "36L": "111.7",
+    "36R": "110.3"
+  },
+  "t_QNH": "ZSPD"
+}

@@ -1,0 +1,9 @@
+{
+  "format": "Xi'an Xianyang International Airport information [{code}], {publish_time} [UTC], {dep_info}{arr_info}{dep_oprt}{arr_oprt}use QNH below transition altitude, {loc}{weather}{windshear}{trans_alt}{trans_fl}{freq}{extra}",
+  "loc": {
+    "05L": "109.9",
+    "05R": "109.3",
+    "23L": "111.1",
+    "23R": "110.3"
+  }
+}

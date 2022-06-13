@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <Platforms>AnyCPU;x64;ARM64</Platforms>
+    <ApplicationIcon>咸鱼圆角叠底.ico</ApplicationIcon>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <BaseOutputPath>..\..\bin\$(MSBuildProjectName)</BaseOutputPath>
+    <UseWindowsForms>False</UseWindowsForms>
+    <SignAssembly>False</SignAssembly>
+    <DelaySign>False</DelaySign>
+    <Authors>Leo Chen, Liming Lu and other project contributors</Authors>
+    <Company>zhangbudademao.com</Company>
+    <Copyright>Copyright ©  2022 zhangbudademao.com, lisensed under GPL 2.0 rules.</Copyright>
+    <AssemblyVersion>0.2.0.10</AssemblyVersion>
+    <FileVersion>$(AssemblyVersion)</FileVersion>
+    <Version>$(AssemblyVersion)</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="咸鱼圆角叠底.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HandyControls" Version="3.3.11" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Octokit" Version="0.51.0" />
+    <PackageReference Include="Prism.Wpf" Version="8.1.97" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="DmCommons.ErrorReport">
+      <HintPath>..\..\libs\DmCommons\DmCommons.ErrorReport.dll</HintPath>
+    </Reference>
+    <Reference Include="DmCommons.Http">
+      <HintPath>..\..\libs\DmCommons\DmCommons.Http.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy &quot;$(ProjectDir)Datas\&quot; &quot;$(TargetDir)data\&quot; /Y /S&#xD;&#xA;copy /B &quot;$(ProjectDir)咸鱼圆角叠底.ico&quot; &quot;$(TargetDir)favicon.ico&quot; /Y&#xD;&#xA;&#xD;&#xA;rd /S /Q &quot;$(TargetDir)ca-ES\&quot;&#xD;&#xA;rd /S /Q &quot;$(TargetDir)fa\&quot;&#xD;&#xA;rd /S /Q &quot;$(TargetDir)fr\&quot;&#xD;&#xA;rd /S /Q &quot;$(TargetDir)ko-KR\&quot;&#xD;&#xA;rd /S /Q &quot;$(TargetDir)pl\&quot;&#xD;&#xA;rd /S /Q &quot;$(TargetDir)pt-BR\&quot;&#xD;&#xA;rd /S /Q &quot;$(TargetDir)ru\&quot;&#xD;&#xA;rd /S /Q &quot;$(TargetDir)tr\&quot;&#xD;&#xA;rd /S /Q &quot;$(TargetDir)zh-CN\&quot;&#xD;&#xA;&#xD;&#xA;if &quot;$(ConfigurationName)&quot; == &quot;Debug&quot; goto delDebug&#xD;&#xA;&#xD;&#xA;del &quot;$(TargetDir)*.xml&quot; /q&#xD;&#xA;del &quot;$(TargetDir)*.pdb&quot; /q&#xD;&#xA;del &quot;$(TargetDir)*.config&quot; /q&#xD;&#xA;&#xD;&#xA;set Tdir=$(TargetDir)&#xD;&#xA;echo %25Tdir:~0,-1%25&#xD;&#xA;start &quot;&quot; /wait &quot;$(TargetDir)Tools\ReleaseIndexGenerator\ReleaseIndexGenerator.exe&quot; &quot;%25Tdir:~0,-1%25&quot;&#xD;&#xA;goto enddel&#xD;&#xA;&#xD;&#xA;:delDebug&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;:enddel" />
+  </Target>
+
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="xcopy $(TargetDir.Replace($(SolutionDir.Replace(&quot;src&quot;,&quot;bin&quot;)),&quot;||&quot;).Replace($(MSBuildProjectName),&quot;AircraftTypeParser&quot;).Replace(&quot;||&quot;,$(SolutionDir.Replace(&quot;src&quot;,&quot;bin&quot;)))) &quot;$(TargetDir)plugins\AircraftTypeParser\&quot; /Y /S&#xD;&#xA;xcopy $(TargetDir.Replace($(SolutionDir.Replace(&quot;src&quot;,&quot;bin&quot;)),&quot;||&quot;).Replace($(MSBuildProjectName),&quot;ReleaseIndexGenerator&quot;).Replace(&quot;||&quot;,$(SolutionDir.Replace(&quot;src&quot;,&quot;bin&quot;)))) &quot;$(TargetDir)tools\ReleaseIndexGenerator\&quot; /Y /S&#xD;&#xA;" />
+  </Target>
+
+
+</Project>
