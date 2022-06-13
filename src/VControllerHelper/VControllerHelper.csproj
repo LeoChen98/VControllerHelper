@@ -18,6 +18,7 @@
     <AssemblyVersion>0.2.0.10</AssemblyVersion>
     <FileVersion>$(AssemblyVersion)</FileVersion>
     <Version>$(AssemblyVersion)</Version>
+    <Description>An assistant tool for virtual controllers.</Description>
   </PropertyGroup>
 
   <ItemGroup>

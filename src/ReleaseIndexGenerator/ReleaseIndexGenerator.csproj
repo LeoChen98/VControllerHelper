@@ -7,6 +7,12 @@
     <Nullable>enable</Nullable>
     <StartupObject>ReleaseIndexGenerator.Program</StartupObject>
     <BaseOutputPath>..\..\bin\$(MSBuildProjectName)</BaseOutputPath>
+    <Version>$(AssemblyVersion)</Version>
+    <FileVersion>$(AssemblyVersion)</FileVersion>
+    <Authors>Leo Chen</Authors>
+    <Company>zhangbudademao.com</Company>
+    <Description>A tool for collecting file information.</Description>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>

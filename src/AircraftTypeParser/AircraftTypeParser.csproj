@@ -7,6 +7,13 @@
     <Nullable>enable</Nullable>
     <BaseOutputPath>..\..\bin\$(MSBuildProjectName)</BaseOutputPath>
     <StartupObject>AircraftTypeParser.Program</StartupObject>
+    <Version>$(AssemblyVersion)</Version>
+    <FileVersion>$(AssemblyVersion)</FileVersion>
+    <Authors>Leo Chen</Authors>
+    <Company>zhangbudademao.com</Company>
+    <Copyright>Copyright ©  2022 zhangbudademao.com, all rights reserved.</Copyright>
+    <Description>A tool for collecting aircraft information from ICAO.</Description>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>
