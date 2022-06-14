@@ -19,14 +19,27 @@
     <FileVersion>$(AssemblyVersion)</FileVersion>
     <Version>$(AssemblyVersion)</Version>
     <Description>An assistant tool for virtual controllers.</Description>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+    <StartupObject>VControllerHelper.Program</StartupObject>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Core\ExitCallback.html" />
+    <None Remove="Core\ServerSetup.bat" />
+  </ItemGroup>
 
   <ItemGroup>
     <Content Include="咸鱼圆角叠底.ico" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Core\ExitCallback.html" />
+    <EmbeddedResource Include="Core\ServerSetup.bat" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="HandyControls" Version="3.3.11" />
+    <PackageReference Include="Hardcodet.NotifyIcon.Wpf" Version="1.1.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="Octokit" Version="0.51.0" />
     <PackageReference Include="Prism.Wpf" Version="8.1.97" />
@@ -39,6 +52,21 @@
     <Reference Include="DmCommons.Http">
       <HintPath>..\..\libs\DmCommons\DmCommons.Http.dll</HintPath>
     </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
